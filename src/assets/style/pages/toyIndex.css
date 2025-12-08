@@ -1,0 +1,23 @@
+.toy-index {
+    padding: var(--spacing-lg);
+}
+
+.toy-index h3 {
+    margin-bottom: var(--spacing-md);
+}
+
+.toy-index > button {
+    margin-bottom: var(--spacing-md);
+    padding: 0.6em 1.2em;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--clr-border);
+    background-color: var(--clr-primary);
+    color: var(--clr-text);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.toy-index > button:hover {
+    background-color: var(--clr-primary-hover);
+}
+

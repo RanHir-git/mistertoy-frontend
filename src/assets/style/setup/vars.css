@@ -1,0 +1,55 @@
+:root {
+  /* Colors */
+  --clr-primary: #646cff;
+  --clr-primary-hover: #535bf2;
+  --clr-text: rgba(255, 255, 255, 0.87);
+  --clr-text-light: #213547;
+  --clr-bg: #242424;
+  --clr-bg-light: #ffffff;
+  --clr-bg-dark: #1a1a1a;
+  --clr-bg-darker: #2a2a2a;
+  --clr-border: #333;
+  --clr-border-light: #ddd;
+  --clr-border-lighter: #e0e0e0;
+
+  /* Status Colors */
+  --clr-online: #4caf50;
+  --clr-online-bg: #e8f5e9;
+  --clr-online-text: #2e7d32;
+  --clr-offline: #f44336;
+  --clr-offline-bg: #ffebee;
+  --clr-offline-text: #c62828;
+  --clr-warning: #ffc107;
+  --clr-warning-bg: #fff3cd;
+  --clr-warning-text: #856404;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 20px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+  /* Transitions */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.25s;
+  --transition-slow: 0.3s;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --clr-text: var(--clr-text-light);
+    --clr-bg: var(--clr-bg-light);
+  }
+}
+

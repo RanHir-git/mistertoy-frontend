@@ -1,0 +1,121 @@
+/* Form Styles */
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: var(--clr-text);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--clr-border-light);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color var(--transition-fast);
+  background-color: var(--clr-bg-light);
+  color: var(--clr-text);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--clr-primary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+}
+
+.submit-btn {
+  background-color: var(--clr-primary);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color var(--transition-fast);
+}
+
+.submit-btn:hover {
+  background-color: var(--clr-primary-hover);
+}
+
+.reset-btn {
+  background-color: #f5f5f5;
+  color: var(--clr-text-light);
+  border: 1px solid var(--clr-border-light);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color var(--transition-fast);
+}
+
+.reset-btn:hover:not(:disabled) {
+  background-color: var(--clr-border-lighter);
+}
+
+.reset-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.unsaved-changes-warning {
+  background-color: var(--clr-warning-bg);
+  border: 1px solid var(--clr-warning);
+  color: var(--clr-warning-text);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.9rem;
+  animation: slideIn var(--transition-slow) ease-out;
+}
+
+/* Dark mode for forms */
+@media (prefers-color-scheme: dark) {
+  .form-group label {
+    color: var(--clr-text);
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background-color: var(--clr-bg-darker);
+    border-color: var(--clr-border);
+    color: var(--clr-text);
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--clr-primary);
+  }
+
+  .reset-btn {
+    background-color: var(--clr-bg-darker);
+    border-color: var(--clr-border);
+    color: var(--clr-text);
+  }
+
+  .reset-btn:hover:not(:disabled) {
+    background-color: var(--clr-border);
+  }
+}
+

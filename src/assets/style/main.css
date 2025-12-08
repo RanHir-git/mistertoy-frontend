@@ -1,0 +1,22 @@
+/* Main CSS File - Imports all stylesheets */
+
+/* Setup */
+@import './setup/vars.css';
+@import './setup/typography.css';
+
+/* Base */
+@import './base/base.css';
+@import './base/forms.css';
+@import './base/helpers.css';
+@import './base/layout.css';
+
+/* Components */
+@import './cmps/NicePopup.css';
+@import './cmps/Chat.css';
+@import './cmps/ToysPreview.css';
+@import './cmps/ToyList.css';
+
+/* Pages */
+@import './pages/Home.css';
+@import './pages/toyIndex.css';
+

@@ -1,0 +1,37 @@
+/* Helper Classes */
+.card {
+  padding: var(--spacing-xl);
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.logo {
+  height: 6em;
+  padding: var(--spacing-lg);
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* List helpers */
+.clean-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+

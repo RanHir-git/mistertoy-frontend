@@ -1,0 +1,111 @@
+/* NicePopup Component Styles */
+.nice-popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn var(--transition-fast) ease-in;
+}
+
+.nice-popup-content {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideUp var(--transition-slow) ease-out;
+}
+
+.nice-popup-header {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--clr-border-lighter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.nice-popup-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.nice-popup-close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+}
+
+.nice-popup-close-btn:hover {
+  background-color: var(--clr-border-lighter);
+  color: #333;
+}
+
+.nice-popup-main {
+  padding: var(--spacing-lg);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.nice-popup-footer {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-top: 1px solid var(--clr-border-lighter);
+  background-color: #f5f5f5;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .nice-popup-content {
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-text);
+  }
+
+  .nice-popup-header {
+    background-color: var(--clr-bg-darker);
+    border-bottom-color: var(--clr-border);
+  }
+
+  .nice-popup-header h2 {
+    color: var(--clr-text);
+  }
+
+  .nice-popup-close-btn {
+    color: #aaa;
+  }
+
+  .nice-popup-close-btn:hover {
+    background-color: var(--clr-border);
+    color: var(--clr-text);
+  }
+
+  .nice-popup-footer {
+    background-color: var(--clr-bg-darker);
+    border-top-color: var(--clr-border);
+    color: #aaa;
+  }
+}
+
