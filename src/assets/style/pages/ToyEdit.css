@@ -1,0 +1,229 @@
+.toy-edit {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+}
+
+.toy-edit form,
+.toy-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    background-color: var(--clr-bg-darker);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.toy-edit label,
+.toy-form label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--clr-text);
+    font-size: 0.95rem;
+}
+
+.toy-edit input[type="text"],
+.toy-edit input[type="number"],
+.toy-edit input[type="url"],
+.toy-form input[type="text"],
+.toy-form input[type="number"],
+.toy-form input[type="url"] {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.toy-edit input[type="text"]:focus,
+.toy-edit input[type="number"]:focus,
+.toy-edit input[type="url"]:focus,
+.toy-form input[type="text"]:focus,
+.toy-form input[type="number"]:focus,
+.toy-form input[type="url"]:focus {
+    outline: none;
+    border-color: var(--clr-primary);
+    box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.1);
+}
+
+.toy-edit input[type="checkbox"],
+.toy-form input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--clr-primary);
+    margin-right: var(--spacing-xs);
+}
+
+.toy-edit label[for="inStock"],
+.toy-form label[for="add-inStock"] {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Native select removed - now using Material-UI Select */
+
+/* Regular HTML buttons only - exclude Material-UI buttons */
+.toy-edit button:not(.MuiButton-root),
+.toy-form button:not(.MuiButton-root) {
+    padding: var(--spacing-md) var(--spacing-xl);
+    background-color: var(--clr-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    margin-top: 0;
+}
+
+.toy-edit button:not(.MuiButton-root):hover,
+.toy-form button:not(.MuiButton-root):hover {
+    background-color: var(--clr-primary-hover);
+    transform: translateY(-1px);
+}
+
+.toy-edit button:not(.MuiButton-root):active,
+.toy-form button:not(.MuiButton-root):active {
+    transform: translateY(0);
+}
+
+.toy-edit .button-group {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+/* Material-UI Button styles - ensure default colors are used */
+.toy-edit .button-group .MuiButton-root {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease !important;
+}
+
+/* Ensure Material-UI success button uses default green color */
+.toy-edit .button-group .MuiButton-containedSuccess {
+    background-color: #2e7d32 !important;
+}
+
+.toy-edit .button-group .MuiButton-containedSuccess:hover {
+    background-color: #1b5e20 !important;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+    transform: translateY(-1px);
+}
+
+/* Ensure Material-UI error button uses default red color */
+.toy-edit .button-group .MuiButton-containedError {
+    background-color: #d32f2f !important;
+}
+
+.toy-edit .button-group .MuiButton-containedError:hover {
+    background-color: #a72222 !important;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+    transform: translateY(-1px);
+}
+
+.toy-edit .button-group .MuiButton-root:active {
+    transform: translateY(0) !important;
+}
+
+/* Material-UI Multiselect Styling */
+.toy-edit-multiselect .MuiOutlinedInput-root {
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+}
+
+.toy-edit-multiselect .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: var(--clr-border);
+}
+
+.toy-edit-multiselect .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--clr-primary);
+}
+
+.toy-edit-multiselect .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--clr-primary);
+    border-width: 2px;
+}
+
+.toy-edit-multiselect .MuiInputLabel-root {
+    color: var(--clr-text);
+}
+
+.toy-edit-multiselect .MuiInputLabel-root.Mui-focused {
+    color: var(--clr-primary);
+}
+
+/* Selected chips styling */
+.toy-edit-multiselect .MuiChip-root {
+    background-color: var(--clr-primary);
+    color: white;
+}
+
+.toy-edit-multiselect .MuiChip-deleteIcon {
+    color: white;
+}
+
+.toy-edit-multiselect .MuiChip-deleteIcon:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Dropdown menu styling - className is on Paper itself */
+.toy-edit-multiselect-menu {
+    background-color: var(--clr-bg) !important;
+    color: var(--clr-text) !important;
+}
+
+/* Non-selected menu items - use menu container class since MenuItems render in portal */
+.toy-edit-multiselect-menu .menu-item-unselected,
+.toy-edit-multiselect .menu-item-unselected {
+    color: var(--clr-text);
+    background-color: var(--clr-border);
+}
+
+.toy-edit-multiselect-menu .menu-item-unselected:hover,
+.toy-edit-multiselect .menu-item-unselected:hover {
+    background-color: var(--clr-bg-darker);
+}
+
+/* Selected menu items */
+.toy-edit-multiselect-menu .menu-item-selected,
+.toy-edit-multiselect .menu-item-selected {
+    background-color: var(--clr-primary) !important;
+    color: white !important;
+}
+
+.toy-edit-multiselect-menu .menu-item-selected:hover,
+.toy-edit-multiselect .menu-item-selected:hover {
+    background-color: var(--clr-primary-hover) !important;
+    color: white !important;
+}
+
+/* Light mode adjustments */
+@media (prefers-color-scheme: light) {
+    .toy-edit form,
+    .toy-form {
+        background-color: var(--clr-bg-light);
+        border: 1px solid var(--clr-border-light);
+    }
+
+    .toy-edit input[type="text"],
+    .toy-edit input[type="number"],
+    .toy-edit input[type="url"],
+    .toy-form input[type="text"],
+    .toy-form input[type="number"],
+    .toy-form input[type="url"] {
+        background-color: white;
+        border-color: var(--clr-border-light);
+        color: var(--clr-text-light);
+    }
+}
+

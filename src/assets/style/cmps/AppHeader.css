@@ -1,0 +1,22 @@
+.app-nav{
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    & a {
+        box-sizing: border-box;
+        text-decoration: none;
+        color: var(--clr-text);
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: color var(--transition-fast);
+        background-color: var(--clr-bg-darker);
+        padding: 10px;
+        border-radius: var(--radius-md);
+        &:hover {
+            color: var(--clr-primary);
+        }
+    }
+}

@@ -15,8 +15,14 @@
 @import './cmps/Chat.css';
 @import './cmps/ToysPreview.css';
 @import './cmps/ToyList.css';
+@import './cmps/ToyFilter.css';
+@import './cmps/AppHeader.css';
+@import './cmps/GoogleMap.css';
 
 /* Pages */
 @import './pages/Home.css';
 @import './pages/toyIndex.css';
+@import './pages/ToyEdit.css';
+@import './pages/about.css';
+
 

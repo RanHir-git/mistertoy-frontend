@@ -24,7 +24,7 @@ a {
   text-decoration: inherit;
 }
 
-a:hover {
+/* a:hover {
   color: var(--clr-primary-hover);
-}
+} */
 

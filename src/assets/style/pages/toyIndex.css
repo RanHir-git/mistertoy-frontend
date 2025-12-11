@@ -1,9 +1,9 @@
-.toy-index {
-    padding: var(--spacing-lg);
-}
 
 .toy-index h3 {
     margin-bottom: var(--spacing-md);
+    margin-top: 0;
+    text-align: center;
+    font-size: 2rem;
 }
 
 .toy-index > button {
@@ -21,3 +21,11 @@
     background-color: var(--clr-primary-hover);
 }
 
+.sortable-headers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+}

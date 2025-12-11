@@ -1,0 +1,234 @@
+.toy-filter {
+    background-color: var(--clr-bg-darker);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.toy-filter h2 {
+    margin: 0 0 var(--spacing-lg) 0;
+    color: var(--clr-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--clr-border);
+    padding-bottom: var(--spacing-sm);
+}
+
+.toy-filter form {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.toy-filter label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--clr-text);
+    font-size: 0.95rem;
+    text-wrap: nowrap;
+}
+
+.toy-filter input[type="text"] {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-text);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.toy-filter input[type="text"]:focus {
+    outline: none;
+    border-color: var(--clr-primary);
+    box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.1);
+}
+
+/* Native select styling (if any remain) */
+.toy-filter select {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-text);
+    cursor: pointer;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Material-UI Select styling for In Stock filter */
+.toy-filter .MuiFormControl-root {
+    min-width: 120px;
+}
+
+.toy-filter .MuiOutlinedInput-root {
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-text);
+}
+
+.toy-filter .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: var(--clr-border);
+}
+
+.toy-filter .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--clr-primary);
+}
+
+.toy-filter .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--clr-primary);
+    border-width: 2px;
+}
+
+.toy-filter .MuiInputLabel-root {
+    color: var(--clr-text);
+    font-size: 1rem;
+}
+
+.toy-filter .MuiInputLabel-root.Mui-focused {
+    color: var(--clr-primary);
+}
+
+/* Make In Stock label bigger */
+#inStock-select-label {
+    font-size: 1.1rem;
+}
+
+/* In Stock select menu items */
+.toy-filter-instock-menu .MuiMenuItem-root,
+.toy-filter .MuiMenuItem-root {
+    color: var(--clr-text);
+    background-color: var(--clr-bg);
+}
+
+.toy-filter-instock-menu .MuiMenuItem-root:hover,
+.toy-filter .MuiMenuItem-root:hover {
+    background-color: var(--clr-bg-darker);
+}
+
+/* In Stock select menu background */
+.toy-filter-instock-menu {
+    background-color: var(--clr-bg) !important;
+    color: var(--clr-text) !important;
+}
+
+.toy-filter select:focus {
+    outline: none;
+    border-color: var(--clr-primary);
+    box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.1);
+}
+
+.toy-filter select[multiple] {
+    height: 100px;
+    padding: var(--spacing-xs);
+}
+
+.toy-filter select[multiple] option {
+    
+    padding: var(--spacing-xs);
+    margin: 2px 0;
+    border-radius: var(--radius-sm);
+    
+}
+
+.toy-filter select[multiple] option:checked {
+    background-color: var(--clr-primary);
+    color: white;
+}
+
+/* Material-UI Multiselect Styling for Filter */
+.toy-filter-multiselect .MuiOutlinedInput-root {
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-text);
+}
+
+.toy-filter-multiselect .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: var(--clr-border);
+}
+
+.toy-filter-multiselect .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--clr-primary);
+}
+
+.toy-filter-multiselect .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--clr-primary);
+    border-width: 2px;
+}
+
+.toy-filter-multiselect .MuiInputLabel-root {
+    color: var(--clr-text);
+}
+
+.toy-filter-multiselect .MuiInputLabel-root.Mui-focused {
+    color: var(--clr-primary);
+}
+
+/* Selected chips styling */
+.toy-filter-multiselect .MuiChip-root {
+    background-color: var(--clr-primary);
+    color: white;
+}
+
+.toy-filter-multiselect .MuiChip-deleteIcon {
+    color: white;
+}
+
+.toy-filter-multiselect .MuiChip-deleteIcon:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Dropdown menu styling - className is on Paper itself */
+.toy-filter-multiselect-menu {
+    background-color: var(--clr-bg) !important;
+    color: var(--clr-text) !important;
+}
+
+/* Non-selected menu items */
+.toy-filter-multiselect-menu .menu-item-unselected,
+.toy-filter-multiselect .menu-item-unselected {
+    color: var(--clr-text);
+    background-color: var(--clr-bg-dark);
+}
+
+.toy-filter-multiselect-menu .menu-item-unselected:hover,
+.toy-filter-multiselect .menu-item-unselected:hover {
+    background-color: var(--clr-bg-darker);
+}
+
+/* Selected menu items */
+.toy-filter-multiselect-menu .menu-item-selected,
+.toy-filter-multiselect .menu-item-selected {
+    background-color: var(--clr-primary) !important;
+    color: white !important;
+}
+
+.toy-filter-multiselect-menu .menu-item-selected:hover,
+.toy-filter-multiselect .menu-item-selected:hover {
+    background-color: var(--clr-primary-hover) !important;
+    color: white !important;
+}
+
+@media (prefers-color-scheme: light) {
+    .toy-filter {
+        background-color: var(--clr-bg-light);
+        border: 1px solid var(--clr-border-light);
+    }
+
+    .toy-filter input[type="text"],
+    .toy-filter select {
+        background-color: white;
+        border-color: var(--clr-border-light);
+    }
+
+    .toy-filter select[multiple] option:checked {
+        background-color: var(--clr-primary);
+        color: white;
+    }
+}
+

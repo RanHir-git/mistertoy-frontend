@@ -37,11 +37,12 @@ export function ToyDetails() {
     return (
         <section className="toy-details">
             <h1>Toy name: {toy.name}</h1>
-            <h2>Toy is {(toy.inStock > 0)? 'In Stock' : 'Out of Stock'}</h2>
+            <img src={toy.imgUrl} alt={toy.name} width="200" height="200" />
+            <h2>Toy is {toy.inStock ? 'In Stock' : 'Out of Stock'}</h2>
             <h2>Labels: {toy.labels.join(', ')}</h2>
             <h2>Created At: {toy.createdAt}</h2>
             <h1>Toy price: {toy.price}</h1>
-            <img src={toy.imgUrl} alt={toy.name} width="200" height="200" />
+            
             <button onClick={onBack}>Back to list</button>
             
             {/* Chat icon button - opens the popup */}
