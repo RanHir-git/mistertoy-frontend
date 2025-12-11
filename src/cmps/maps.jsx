@@ -1,7 +1,8 @@
 
 import { useState, useEffect, useRef } from "react"
-const API_KEY = 'AIzaSyAg-cFoosaE1LY5TDskWhdW9VyMKHpC8WM'
 import { AdvancedMarker, APIProvider, Map, useMap, Pin, InfoWindow } from '@vis.gl/react-google-maps';
+
+const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
 // Define multiple marker locations
 const MARKERS = [
